@@ -1,0 +1,12 @@
+{
+    "host": "", 
+    "version": "", 
+    "port": 6969,
+    "owner": "",
+    "customStartMsg": "",
+    "noChat": false, 
+    "needsPort": false, 
+    "experimentalFeatures": false,
+    "processquit": true,
+    "consoleCounter": true
+}

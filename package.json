@@ -1,0 +1,22 @@
+{
+  "name": "minebot-v2.0r",
+  "version": "2.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "minecraft-data": "^3.78.0",
+    "minecraft-protocol": "^1.50.0",
+    "mineflayer": "^4.23.0",
+    "mineflayer-pathfinder": "^2.4.5",
+    "prismarine-viewer": "^1.28.0",
+    "sv443-joke-api": "^0.1.0"
+  }
+}

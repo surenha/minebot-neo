@@ -57,7 +57,6 @@ An easy-to-use Minecraft bot written in JavaScript using Mineflayer.
 ### Commands:
 
 -   **Console:**
-    
     -   `!help` Displays available commands.
     -   `!players` Lists online players.
     -   `!quit` Stops the bot.
@@ -65,7 +64,10 @@ An easy-to-use Minecraft bot written in JavaScript using Mineflayer.
     -   `!info` Displays information about the server and the bot.
     -   `!follow <player>` Makes the bot follow a player.
     -   `!stopfollow` Stops following.
+    -   `!pos` Displays the current Position-
+    -   `!goto <x, y, z>` The bot will go to the Coordinates.
     -   To make the bot write/execute something in the Minecraft chat, simply enter the text without a '!' prefix.
+
 -   **Minecraft** 
 _To execute commands from the Minecraft chat, send the bot a direct message with the command._ _The bot cannot execute commands on servers with a different chat pattern, as it won’t recognize these as whispers._
     
@@ -75,6 +77,8 @@ _To execute commands from the Minecraft chat, send the bot a direct message with
     -   `!quit` Stops the bot.
     -   `!say <message>` The bot will write the specified message in chat. This can include commands.
     -   `!players` Lists online players.
+    -   `!pos` Displays the current Position-
+    -   `!goto <x, y, z>` The bot will go to the Coordinates.
 
 [Discord Server](https://discord.gg/CKySgRzUYp)  
 [Eglijohn's Discord Account](https://discord.com/users/1254464035546464321)  

@@ -20,21 +20,9 @@ let botArgs = {};
 let botNames = [];
 let config = {};
 let owner;
-let version = "NEO 2.0.1a";
+let version = "2.0.1a";
 let count = 0;
-
-
-
-console.log(chalk.red('NOTE:') + chalk.gray(' The Bot is currently in Development. Please report Bugs to our Discord-Server:') + chalk.hex('#65b0db')(' https://discord.gg/CKySgRzUYp'));
-console.log(chalk.bold.hex('#044cd9')("___  ____            _           _    ") + chalk.hex('#f5f5f5')(" _   _  _____ _____ "));
-console.log(chalk.bold.hex('#0443bf')("|  \\/  (_)          | |         | |   ") + chalk.hex('#e1e1e3')("| \\ | ||  ___|  _  |"));
-console.log(chalk.bold.hex('#033cab')("| .  . |_ _ __   ___| |__   ___ | |_  ") + chalk.hex('#b6b6b8')("|  \\| || |__ | | | |"));
-console.log(chalk.bold.hex('#02369c')("| |\\/| | | '_ \\ / _ \\ '_ \\ / _ \\| __| ") + chalk.hex('#88898a')("| . ` ||  __|| | | |"));
-console.log(chalk.bold.hex('#012e85')("| |  | | | | | |  __/ |_) | (_) | |_  ") + chalk.hex('#5a5b5c')("| |\\  || |___\\ \\_/ /"));
-console.log(chalk.bold.hex('#022975')("\\_|  |_/_|_| |_|\\___|_.__/ \\___/ \\__|") + chalk.hex('#48494a')(" \\_| \\_/\\____/ \\___/ "));
-console.log(chalk.hex('#011b4f')("By Eglijohn                                        ") + chalk.hex('#282929')("v2.0.1r "));
-console.log(chalk.gray("=========================================================="));
-console.log(' ')
+let egliGod = "."
 
 
 
@@ -65,6 +53,30 @@ async function readAccountFile() {
         console.error(chalk.red('Error reading ACCOUNT.json:'), error);
         process.exit(1);
     }
+}
+
+
+if (config.ogTitle = false) {
+    console.log(chalk.red('NOTE:') + chalk.gray(' The Bot is currently in Development. Please report Bugs to our Discord-Server:') + chalk.hex('#65b0db')(' https://discord.gg/CKySgRzUYp'));
+    console.log(chalk.bold.hex('#044cd9')("___  ____            _           _    ") + chalk.hex('#f5f5f5')(" _   _  _____ _____ "));
+    console.log(chalk.bold.hex('#0443bf')("|  \\/  (_)          | |         | |   ") + chalk.hex('#e1e1e3')("| \\ | ||  ___|  _  |"));
+    console.log(chalk.bold.hex('#033cab')("| .  . |_ _ __   ___| |__   ___ | |_  ") + chalk.hex('#b6b6b8')("|  \\| || |__ | | | |"));
+    console.log(chalk.bold.hex('#02369c')("| |\\/| | | '_ \\ / _ \\ '_ \\ / _ \\| __| ") + chalk.hex('#88898a')("| . ` ||  __|| | | |"));
+    console.log(chalk.bold.hex('#012e85')("| |  | | | | | |  __/ |_) | (_) | |_  ") + chalk.hex('#5a5b5c')("| |\\  || |___\\ \\_/ /"));
+    console.log(chalk.bold.hex('#022975')("\\_|  |_/_|_| |_|\\___|_.__/ \\___/ \\__|") + chalk.hex('#48494a')(" \\_| \\_/\\____/ \\___/ "));
+    console.log(chalk.hex('#011b4f')("By Eglijohn                                        ") + chalk.hex('#282929')(version));
+    console.log(chalk.gray("=========================================================="));
+    console.log(' ')
+} else {
+    console.log(chalk.red('NOTE:') + chalk.gray(' The Bot is currently in Development. Please report Bugs or Wishes to Eglijohn.'));
+    console.log(chalk.bold.blue("___  ____            _           _    ") + chalk.gray(" _   _  _____ _____ "));
+    console.log(chalk.bold.blue("|  \\/  (_)          | |         | |   ") + chalk.gray("| \\ | ||  ___|  _  |"));
+    console.log(chalk.bold.blue("| .  . |_ _ __   ___| |__   ___ | |_  ") + chalk.gray("|  \\| || |__ | | | |"));
+    console.log(chalk.bold.blue("| |\\/| | | '_ \\ / _ \\ '_ \\ / _ \\| __| ") + chalk.gray("| . ` ||  __|| | | |"));
+    console.log(chalk.bold.blue("| |  | | | | | |  __/ |_) | (_) | |_  ") + chalk.gray("| |\\  || |___\\ \\_/ /"));
+    console.log(chalk.bold.blue("\\_|  |_/_|_| |_|\\___|_.__/ \\___/ \\__|") + chalk.gray(" \\_| \\_/\\____/ \\___/ "));
+    console.log(chalk.cyan("By Eglijohn                                         ", version));
+    console.log(chalk.gray("=========================================================="));
 }
 
 
@@ -151,7 +163,7 @@ class MCBot {
             if (config.noChat === true) {
                 this.bot.chat(`${config.customStartMsg}`);
             } else {
-                this.bot.chat(`Minebot ${version}. Developed by Eglijohn.`);
+                this.bot.chat(`Minebot NEO ${version}. Developed by Eglijohn.`);
             }
         });
     }
@@ -419,11 +431,13 @@ class MCBot {
 
         this.bot.on('whisper', async (username, message) => {
             if (botNames.includes(username)) return;
+        
+            if (!message.startsWith("!")) return;
 
             let msg = message.toString();
 
             if (msg.startsWith("!help")) {
-                this.bot.chat(`/msg ${username} Minebot ${version} by Eglijohn.`);
+                this.bot.chat(`/msg ${username} Minebot NEO ${version} by Eglijohn.`);
                 this.bot.chat(`/msg ${username} The owner of the bot is: ${config.owner}.`);
                 this.bot.chat(`/msg ${username} Commands: (Remove the '.', only executable for the Owner)`);
                 this.bot.chat(`/msg ${username} .!help to show this Text`);
@@ -433,7 +447,7 @@ class MCBot {
                 this.bot.chat(`/msg ${username} .!players for a list of online players`);
 
             } else if (msg.startsWith("!follow")) {
-                if (username !== owner && username !== 'Eglijohn') {
+                if (username !== owner) {
                     this.bot.chat(`/msg ${username} Sorry, but you are not ${owner}`);
                     return;
                 }
@@ -447,7 +461,7 @@ class MCBot {
                 }
 
             } else if (msg.startsWith("!stopfollow")) {
-                if (username !== owner && username !== 'Eglijohn') {
+                if (username !== owner) {
                     this.bot.chat(`/msg ${username} Sorry, but you are not ${owner}`);
                     return;
                 }
@@ -456,7 +470,7 @@ class MCBot {
                 this.bot.chat(`/msg ${username} I stopped following you`);
             
             } else if (msg.startsWith("!quit")) {
-                if (username !== owner && username !== 'Eglijohn') {
+                if (username !== owner) {
                     this.bot.chat(`/msg ${username} Sorry, but you are not ${owner}`);
                     return;
                 }
@@ -464,7 +478,7 @@ class MCBot {
     
             } else if (msg.startsWith("!say")) {
                 const sayMessage = msg.substring(5);
-                if (username !== owner && username !== 'Eglijohn') {
+                if (username !== owner) {
                     this.bot.chat(`/msg ${username} Sorry, but you are not ${owner}`);
                     return;
                 }
@@ -475,18 +489,18 @@ class MCBot {
                 this.bot.chat(playerList.length > 0 ? `/msg ${username} Online players: ${playerList.join(', ')}` : `/msg ${username} No other players are online.`);
 
             } else if (msg.startsWith("!pos")) {
-                if (username !== owner && username !== 'Eglijohn') {
+                if (username !== owner) {
                     this.bot.chat(`/msg ${username} Sorry, but you are not ${owner}`);
                     return;
                 }
                 this.bot.chat(`My current Position: ${this.bot.entity.position}`)
 
             } else if (msg.startsWith("!goto")) {
-                if (username !== owner && username !== 'Eglijohn') {
+                if (username !== owner) {
                     this.bot.chat(`/msg ${username} Sorry, but you are not ${owner}`);
                     return;
                 }
-            
+
                 const args = msg.split(' ');
                 if (args.length === 4) { 
                     const x = parseFloat(args[1]);

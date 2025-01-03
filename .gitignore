@@ -1,1 +1,6 @@
-
+node_modules/
+.gitgnore
+.gitattributes
+config/
+logs/log.txt
+logs/logFromChat.txt

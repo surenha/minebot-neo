@@ -7,13 +7,9 @@ An easy-to-use Minecraft bot written in JavaScript using Mineflayer.
 
 **READ THE WHOLE MANUAL BEFORE STARTING THE BOT!**
 
-[Discord Server](https://discord.gg/CKySgRzUYp)  
-[Eglijohn's Discord Account](https://discord.com/users/1254464035546464321)  
+[Discord Server](https://discord.gg/CKySgRzUYp)   
 
 _**YOU ARE ALLOWED TO EDIT THE CODE.**_  
 _**You are NOT allowed to share the code itself; only share the link.**_
 _**I assume no responsibility for any damage caused by this Bot**_
 
-### Dependencies:
-
--   Node.js

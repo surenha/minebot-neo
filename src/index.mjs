@@ -1,7 +1,9 @@
 // Minebot NEO by Eglijohn
 // DC-Server: https://discord.gg/CKySgRzUYp
 // Have you read the Manual??
-// Who's the skibidiest of them all? Sentoljaard, he owns us all!
+// Who's the skibidiest of them all? Sentoljaard, he owns us all! (Sorry)
+
+// Shutouts to R3akeOn3_ for giving me nice ideas :)
 
 
 import mineflayer from 'mineflayer';

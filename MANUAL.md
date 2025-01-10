@@ -1,3 +1,4 @@
+# OUTDATED, IM WORKING ON A NEW VERSION
 # Minebot NEO
 An easy-to-use Minecraft bot written in JavaScript using Mineflayer.
 

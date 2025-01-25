@@ -1,46 +1,43 @@
-// Minebot NEO by Eglijohn
-// DC-Server: https://discord.gg/CKySgRzUYp
-// Have you read the Manual??
-// Who's the skibidiest of them all? Sentoljaard, he owns us all!
+// Minebot by surenha
 
-{ 
-    "host": "",                         // Server 
-    "version": "",                      // Minecraft version
-    "port": 6969,                       // Port
-    "needsPort": false,                 // If the server needs a port
-    "owner": "",                        // The owner of the bot
+{
+  "host": "", // Server
+  "version": "", // Minecraft version
+  "port": 6969, // Port
+  "needsPort": false, // If the server needs a port
+  "owner": "", // The owner of the bot
 
-    "customStartMsg": "",               // Custom start message
-    "noChat": false,                    // If the bot should not Write anything in the chat
-    "chatLogMethod": "normal",          // Chat log method
+  "customStartMsg": "", // Custom start message
+  "noChat": false, // If the bot should not Write anything in the chat
+  "chatLogMethod": "normal", // Chat log method
 
-    "logWhenNoTotem": false,            // If the bot should log when no totem is in the inventory and he popped one
-    "autoLog": false,                   // If the bot should automatically log out when health is low
-    "autoLogHealth": 10,                // Auto log health (hearts x2)
-    "reconnectTimeout": 5000,           // Reconnect timeout
+  "logWhenNoTotem": false, // If the bot should log when no totem is in the inventory and he popped one
+  "autoLog": false, // If the bot should automatically log out when health is low
+  "autoLogHealth": 10, // Auto log health (hearts x2)
+  "reconnectTimeout": 5000, // Reconnect timeout
 
-    "canDig": false,                    // If the bot can dig
-    "canPlace": false,                  // If the bot can place blocks
+  "canDig": false, // If the bot can dig
+  "canPlace": false, // If the bot can place blocks
 
-    "processquit": true,                // If the procces should quit when the bot is disconnected
+  "processquit": true, // If the procces should quit when the bot is disconnected
 
-    "antiAFK": false,                   // If the bot should sneak to prevent AFK
-    "antiAFKInterval": 15000,           // AntiAFK interval
-    "sneakDuration": 100,               // Sneak duration
+  "antiAFK": false, // If the bot should sneak to prevent AFK
+  "antiAFKInterval": 15000, // AntiAFK interval
+  "sneakDuration": 100, // Sneak duration
 
-    "chatBot": false,                   // Chatbot
-    "command1": "",                     // Command 1
-    "response1": "",                    // Response 1
-    "command1trusted": true,            // If the command should only be executable for the owner
+  "chatBot": false, // Chatbot
+  "command1": "", // Command 1
+  "response1": "", // Response 1
+  "command1trusted": true, // If the command should only be executable for the owner
 
-    "experimentalFeatures": false,      // If the bot should use experimental features
-    "consoleCounter": true,             // If the bot should show the log counter
-    "cliPrefix": "> ",                  // CLI prefix
-    "commandPrefix": "!",               // CLI Command prefix
-    "hideErrors": true,                 // If the bot should hide errors
-    "viewerPort": 3000,                 // Prismarine-Viewer port. Only works with experimental features
-    "customBramd": "Minebot NEO",       // Custom client brand
+  "experimentalFeatures": false, // If the bot should use experimental features
+  "consoleCounter": true, // If the bot should show the log counter
+  "cliPrefix": "> ", // CLI prefix
+  "commandPrefix": "!", // CLI Command prefix
+  "hideErrors": true, // If the bot should hide errors
+  "viewerPort": 3000, // Prismarine-Viewer port. Only works with experimental features
+  "customBramd": "Minebot NEO", // Custom client brand
 
-    "lookAtNearestPlayer": false,       // If the bot should look at the nearest player
-    "lookAtNearestPlayerInterval": 10   // Look at nearest player interval
+  "lookAtNearestPlayer": false, // If the bot should look at the nearest player
+  "lookAtNearestPlayerInterval": 10 // Look at nearest player interval
 }
